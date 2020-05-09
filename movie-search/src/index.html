@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <title>MovieSearch</title>
   </head>
   <body>
@@ -19,28 +20,89 @@
           <i class="fa fa-search icon"></i>
           <input
             class="input-field"
-            type="text"
+            type="search"
             placeholder="Search for movies"
             name="movie"
+            autocomplete="off"
           />
-          <i class="fa fa-times icon delete"></i>
-          <i class="fa fa-keyboard-o icon keyboard"></i>
+          <!-- <i class="fa fa-times icon delete hidden"></i>
+          <i class="fa fa-keyboard-o icon keyboard"></i> -->
         </div>
         <button type="submit" class="btn">Search</button>
       </form>
-      
-      <div class="movies">
-        <div class="movie">
-          <p class="name">Some names</p>
-          <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
-          <p class="year">2000</p>
-          <div class="rating">
-            <i class="fa fa-star git-icon"></i>
-            <p class="rate">4.0</p>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="" class="name">Some name</a>
+            <img src="" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <p class="name">Some names</p>
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png" alt="Movie cover" class="image">
+            <p class="year">2000</p>
+            <div class="rating">
+              <i class="fa fa-star git-icon"></i>
+              <p class="rate">4.0</p>
+            </div>
           </div>
         </div>
-        
+        <!-- Add Pagination -->
+        <!-- Add Arrows -->
       </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </main>
 
     <footer>

@@ -1,0 +1,42 @@
+.swiper-container {
+  width: 75%;
+  height: 60vh;
+  margin: 12vh auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-pagination{
+  top: 90vh;
+}
+
+.swiper-button-next{
+  margin-top: 5vh;
+  right: 11%;
+}
+
+.swiper-button-prev{
+  margin-top: 5vh;
+  left: 11%
+}
+
+.swiper-pagination-bullet{
+  margin: 3px;
+}

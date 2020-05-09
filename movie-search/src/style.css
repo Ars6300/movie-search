@@ -1,3 +1,5 @@
+@import './assets/swiper.css';
+
 *{
   padding: 0;
   margin: 0;
@@ -60,7 +62,7 @@ form{
 
 .input-field {
   width: 100%;
-  padding: 4px 33px; 
+  padding: 4px 5px 4px 33px; 
   outline: none;
   border-width: 1px;
   border-radius: 3px;
@@ -116,23 +118,6 @@ footer .container i{
   font-size: 1.5em;
 }
 
-.movies{
-  margin: 15vh 0 10vh;
-  width: 70vw;
-  display: inline-grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 0;
-  grid-gap: 3vw;
-}
-
-.movie{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-}
-
 .rating{
   display: inline-flex;
   justify-content: center;
@@ -146,17 +131,23 @@ footer .container i{
 .name{
   font-size: 1em;
   font-weight: 700;
+  color: black;
   text-decoration: underline;
 }
 
 .image{
   margin: 1vh 0;
-  width: 100%;
+  width: 80%;
+  height: auto;
 }
 
 .year, .rate{
   font-size: 0.8em;
   font-weight: 700;
+}
+
+.hidden{
+  display: none;
 }
 
 @media screen and (max-width: 540px){
