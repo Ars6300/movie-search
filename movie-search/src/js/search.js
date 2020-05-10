@@ -1,4 +1,4 @@
-import * as handler from './handler';
+import sendRequest from './handler';
 
 const searchInputBox = document.querySelector('body > main > form > div > input');
 // eraseButton = document.querySelector('body > main > form > div > i.fa.fa-times.icon.delete');
@@ -12,7 +12,7 @@ const setCursorOnLoad = () => {
 function submitForm(e) {
   e.preventDefault();
   if (searchInputBox.value.length > 0) {
-    handler.sendRequest(searchInputBox.value);
+    sendRequest(searchInputBox.value);
   }
 }
 

@@ -30,11 +30,9 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-const reGroup = () => {
+window.addEventListener('resize', () => {
   swiper.params.slidesPerView = setSlidesAmount();
   swiper.params.slidesPerGroup = setSlidesAmount();
-};
-
-window.addEventListener('resize', reGroup);
+});
 
 export { swiper as default };

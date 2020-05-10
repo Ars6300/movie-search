@@ -9,12 +9,12 @@ export default class Movie {
 
   getMovie() {
     return `<div class="swiper-slide">
-              <a href="${this.link}" class="name">${this.name}</a>
+              <a href="${this.link}" target="_blank" class="name">${this.name}</a>
               <img src="${this.image}" alt="Movie cover" class="image">
               <p class="year">${this.year}</p>
               <div class="rating">
                 <i class="fa fa-star git-icon"></i>
-                <p class="rate">${this.year}</p>
+                <p class="rate">${this.rate}</p>
               </div>
             </div>`;
   }
