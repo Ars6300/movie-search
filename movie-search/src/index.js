@@ -45,7 +45,6 @@ function getMore() {
   });
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
   setCursorOnLoad();
   loader.classList.remove('hidden');

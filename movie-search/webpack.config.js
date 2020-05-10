@@ -46,6 +46,10 @@ module.exports = {
         from: path.resolve(__dirname, 'src/assets/spinner.svg'),
         to: path.resolve(__dirname, 'dist/assets'),
       },
+      {
+        from: path.resolve(__dirname, 'src/assets/no-image.png'),
+        to: path.resolve(__dirname, 'dist/assets'),
+      },
     ]),
   ],
   module: {

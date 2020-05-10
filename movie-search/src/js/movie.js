@@ -10,7 +10,7 @@ export default class Movie {
   getMovie() {
     return `<div class="swiper-slide">
               <a href="${this.link}" target="_blank" class="name">${this.name}</a>
-              <img src="${this.image}" alt="Movie cover" class="image">
+              <img src="${this.image}" onerror="this.src='./assets/no-image.png';" alt="Movie cover" class="image">
               <p class="year">${this.year}</p>
               <div class="rating">
                 <i class="fa fa-star git-icon"></i>
