@@ -11,6 +11,7 @@
     <title>MovieSearch</title>
   </head>
   <body>
+    <img src="./assets/spinner.svg" class="hidden" id="loader" alt="loader">
     <header>
       <h1>MovieSearch</h1>
     </header>
@@ -31,12 +32,12 @@
         <button type="submit" class="btn">Search</button>
       </form>
 
+      <h2 id="error-message"></h2>
+
       <div class="swiper-container">
         <div class="swiper-wrapper">
           
         </div>
-        <!-- Add Pagination -->
-        <!-- Add Arrows -->
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-next"></div>

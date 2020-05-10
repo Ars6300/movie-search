@@ -20,6 +20,8 @@ const swiper = new Swiper('.swiper-container', {
   slidesPerView: setSlidesAmount(),
   spaceBetween: 0,
   slidesPerGroup: setSlidesAmount(),
+  preloadImages: 'true',
+  updateOnImagesReady: 'true',
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -33,6 +35,8 @@ const swiper = new Swiper('.swiper-container', {
 window.addEventListener('resize', () => {
   swiper.params.slidesPerView = setSlidesAmount();
   swiper.params.slidesPerGroup = setSlidesAmount();
+  swiper.updateProgress();
+  swiper.updateSlidesClasses();
 });
 
 export { swiper as default };

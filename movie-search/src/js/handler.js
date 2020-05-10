@@ -1,41 +1,36 @@
+/* eslint-disable no-await-in-loop */
+/* eslint-disable guard-for-in */
 /* eslint-disable no-unused-vars */
 import Movie from './movie';
-import swiper from './slider';
 
-function sendRequest(word) {
-  const page = 1;
+const errorMessage = document.getElementById('error-message');
+const searchInputBox = document.querySelector('body > main > form > div > input');
+
+async function sendRequest(word, page) {
+  errorMessage.innerHTML = '';
   const apikey = 'e0c4027f';
+  const movies = [];
+
   const url = `https://www.omdbapi.com/?s=${word}&page=${page}&apikey=${apikey}`;
-
-
-  const getMovie = (i) => fetch(url)
-    .then((res) => res.json())
-    .then((data) => data.Search[i]);
-
-
-  const getRate = (id) => {
-    const rateUrl = `https://www.omdbapi.com/?i=${id}&apikey=${apikey}`;
-    return fetch(rateUrl)
-      .then((res) => res.json())
-      .then((data) => data.imdbRating);
-  };
-
-  function makeMovie(movie) {
-    swiper.appendSlide(movie.getMovie());
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    // eslint-disable-next-line no-restricted-syntax
+    for (let i = 0; i < data.Search.length; i += 1) {
+      const idUrl = `https://www.omdbapi.com/?i=${data.Search[i].imdbID}&apikey=${apikey}`;
+      const fres = await fetch(idUrl);
+      const result = await fres.json();
+      const movie = new Movie(result.Title,
+        `https://www.imdb.com/title/${result.imdbID}/videogallery/`,
+        result.Poster,
+        result.Year,
+        result.imdbRating);
+      movies.push(movie.getMovie().toString());
+    }
+  } catch (e) {
+    errorMessage.innerHTML = e.message;
   }
-
-  for (let i = 0; i < 10; i += 1) {
-    getMovie(i).then((response) => {
-      getRate(response.imdbID).then((rating) => {
-        const movie = new Movie(response.Title,
-          `https://www.imdb.com/title/${response.imdbID}/videogallery/`,
-          response.Poster,
-          response.Year,
-          rating);
-        makeMovie(movie);
-      });
-    });
-  }
+  return movies;
 }
 
 export { sendRequest as default };

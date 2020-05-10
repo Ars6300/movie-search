@@ -29,6 +29,7 @@ main{
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 form{
@@ -88,6 +89,24 @@ form{
   opacity: 1;
 }
 
+#loader{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#error-message {
+  color: red;
+  position: absolute;
+  margin-top: 6vh;
+  font-size: 0.8em;
+  width: 100vw;
+  text-align: center;
+}
+
 footer{
   width: 100%;
   height: 6vh;
@@ -129,7 +148,7 @@ footer .container i{
 }
 
 .name{
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 700;
   color: black;
   text-decoration: underline;

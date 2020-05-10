@@ -3,10 +3,14 @@
   height: 60vh;
   margin: 12vh auto;
 }
+.swiper-wrapper{
+  height: fit-content;
+  display: flex;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
