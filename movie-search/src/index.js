@@ -2,7 +2,6 @@ import './style.css';
 import sendRequest from './js/handler';
 import swiper from './js/slider';
 
-
 const searchInputBox = document.querySelector('body > main > form > div > input');
 const searchForm = document.querySelector('body > main > form');
 const loader = document.getElementById('loader');
@@ -14,7 +13,6 @@ const setCursorOnLoad = () => {
   searchInputBox.focus();
   searchInputBox.select();
 };
-
 
 function submitForm(e) {
   e.preventDefault();
